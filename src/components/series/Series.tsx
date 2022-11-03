@@ -11,6 +11,8 @@ export default function Series() {
 
   if (error) return <ErrorPage />;
 
+  if (!data) return <Loading />
+
   if (data) {
     return (
       <div>

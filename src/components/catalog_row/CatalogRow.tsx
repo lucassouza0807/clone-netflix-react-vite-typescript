@@ -1,4 +1,5 @@
 import Loading from "@layouts/loading/Loading";
+import ErrorPage from "@layouts/error_page/ErrorPage";
 import { Link } from "react-router-dom";
 import useFetch from "@hooks/useFetch/useFetch.js";
 import { useState } from "react";
@@ -37,9 +38,10 @@ export default function CatalogRow({genre_name, genre_id, discover_url}: any) {
 
   const { data, error } = useFetch(url);
 
+  if(error) return <ErrorPage />;
+  
   if (!data) return <Loading />;
 
-  if(error) return <h1>ERRO</h1>
   if (data)
     return (
       <div className="catalog-row">

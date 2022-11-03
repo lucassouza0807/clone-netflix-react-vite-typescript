@@ -1,6 +1,6 @@
 import "@/App.css";
-import full_size_logo from "@assets/netflix_full_size_logo.png";
-import mobile_logo from "@assets/mobile_logo.png";
+import full_size_logo from "@assets/full_size_logo.svg";
+import mobile_logo from "@assets/mobile_logo.svg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from "@layouts/search_bar/SearchBar";

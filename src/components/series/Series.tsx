@@ -14,7 +14,6 @@ export default function Series(props: any) {
   if (error) return <ErrorPage />;
 
   if (data) {
-    console.log(data);
     return (
       <div>
         <Featured />

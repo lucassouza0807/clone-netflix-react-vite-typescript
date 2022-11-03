@@ -1,6 +1,6 @@
-import Loading from "@layouts/Loading";
+import Loading from "@layouts/loading/Loading";
 import { Link } from "react-router-dom";
-import useFetch from "@hooks/useFetch.js";
+import useFetch from "@hooks/useFetch/useFetch.js";
 import { useState } from "react";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";

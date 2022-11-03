@@ -1,8 +1,8 @@
 import "./App.css";
-import Header from "@layouts/Header";
-import Browse from "@components/Browse";
+import Header from "@layouts/header/Header";
+import Browse from "@components/browser/Browser";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Series from "@components/Series";
+import Series from "@components/series/Series";
 
 function App() {
   return (

@@ -1,13 +1,13 @@
-import Loading from "@layouts/Loading";
-import useFetch from "../hooks/useFetch";
-import ErrorPage from "@layouts/ErrorPage";
+import Loading from "@layouts/loading/Loading";
+import useFetch from "@hooks/useFetch/useFetch";
+import ErrorPage from "@layouts/error_page/ErrorPage";
 
 export default function Series(props: any) {  
   const url = `${import.meta.env.VITE_APP_BASE_URL}/discover/tv?api_key=${import.meta.env.VITE_APP_API_KEY}`;
 
   const { data, error } = useFetch(url);
   
-  if (error ) return <ErrorPage /> ;
+  if (error) return <ErrorPage /> ;
 
   if (data) 
     return (

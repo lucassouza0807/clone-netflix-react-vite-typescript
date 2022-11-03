@@ -15,6 +15,10 @@ body {
   width: 150px;
 }
 
+.mobile-logo {
+  display: none;
+}
+
 .full-size-logo img {
   position: relative;
   height: 30px;
@@ -54,6 +58,34 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.header-secondary-nav-menu {
+  position: absolute;
+  right: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.header-secondary-nav-menu input {
+  background-color: #111;
+  border: 1px solid #FFFFFF;
+  outline: none;
+  color: #FFFFFF;
+  height: 30px;
+  width: 250px;
+  padding-left: 35px;
+  border-radius: 3px;
+  font-size: medium;
+  transition: 2s;
+}
+
+.search-form {
+  display: none;
+  transition: 1s;
+}
+
 .movie-row {
   width: 98vw;
   position: relative;
@@ -78,14 +110,40 @@ body {
   padding-left: 30px;
   transition: all ease 0.5s;
 }
+
 .loading {
-  height: 100vh;
-  background-color: azure;
+  height: 500px;
+  border: 1px solid green;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #111;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: spin;
+  animation: 5s linear infinite;
 }
 
+.loading-spin {
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  border-radius: 50%;
+  border: 7px solid blue;
+  
+}
+
+
+.loading-spin h1 {
+  color: white;
+}
 .movie-card {
   display: flex;
   justify-content: center;
@@ -367,6 +425,7 @@ body {
   background-color: rgb(0, 0, 0, 0.6);
 
 }
+
 
 @media (min-width: 320px) and (max-width: 480px) {
   .logo {

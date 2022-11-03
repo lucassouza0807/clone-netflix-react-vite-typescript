@@ -1,4 +1,4 @@
-import useFetch from "@hooks/useFetch";
+import useFetch from "@hooks/useFetch/useFetch.js";
 import axios from "axios"
 import { useState, useEffect } from "react";
 
@@ -8,6 +8,7 @@ export default function Featured() {
   const url = `${import.meta.env.VITE_APP_BASE_URL}/discover/tv?with_network=213&language=pt-BR&api_key=${import.meta.env.VITE_APP_API_KEY}`;
   const { data, error } = useFetch(url);
   
+  //componentizar 
   useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/genre/tv/list?api_key=${import.meta.env.VITE_APP_API_KEY}&language=pt-BR`)
       .then(result => {
@@ -23,8 +24,6 @@ export default function Featured() {
   if (data.results && genres) {
     let featured: any =data.results[Math.floor(Math.random() * data.results.length)];
     let image_url: string = `${import.meta.env.VITE_APP_IMAGE_URL}/original${featured.backdrop_path}`;
-    let image_url2: string = `${import.meta.env.VITE_APP_IMAGE_URL}/original${data.results[8].backdrop_path}`;
-
 
     let release_year = new Date(featured.first_air_date);
 
@@ -36,10 +35,10 @@ export default function Featured() {
       filterd_genre_list.push(result[0]);
     }
     
-    let final_filter: any = [];
+    let featured_genre_list: any = [];
 
     for(let index = 0; index < filterd_genre_list.length; index++) {
-      final_filter.push(filterd_genre_list[index].name)
+      featured_genre_list.push(filterd_genre_list[index].name)
     }
 
 
@@ -84,7 +83,7 @@ export default function Featured() {
                 </button>
               </div>
               <div className="featured--genres">
-                <h4>Gêneros: {final_filter.join(", ")}</h4>
+                <h4>Gêneros: {featured_genre_list.join(", ")}</h4>
               </div>
             </div>
           </div>

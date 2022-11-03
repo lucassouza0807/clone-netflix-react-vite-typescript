@@ -1,15 +1,15 @@
-import Loading from "@layouts/Loading";
+import Loading from "@layouts/loading/Loading";
 import { Link } from "react-router-dom";
-import useFetch from "@hooks/useFetch";
+import useFetch from "@hooks/useFetch/useFetch.js";
 import { useState } from "react";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import "@/App.css";
 
-export default function CatalogRow(props: any) {
+export default function CatalogRow({genre_name, genre_id}) {
   const [scrolX, setScrollX] = useState(-400);
 
-  const url = `${import.meta.env.VITE_APP_BASE_URL}/discover/movie?api_key=${import.meta.env.VITE_APP_API_KEY}&with_genres=${props.genre_id}`;
+  const url = `${import.meta.env.VITE_APP_BASE_URL}/discover/movie?api_key=${import.meta.env.VITE_APP_API_KEY}&with_genres=${genre_id}`;
 
   const handleLeftArrow = () => {
     let x : any = scrolX + Math.round(Math.round(window.innerWidth / 2));
@@ -43,7 +43,7 @@ export default function CatalogRow(props: any) {
   if (data)
     return (
       <div className="movie-row">
-          <h1 className="category">{props.genre_name}</h1>
+          <h1 className="category">{genre_name}</h1>
           <div
             className="movie-row-list-area"
             style={{

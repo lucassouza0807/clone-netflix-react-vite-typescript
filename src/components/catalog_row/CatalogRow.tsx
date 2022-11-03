@@ -6,10 +6,10 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import "@/App.css";
 
-export default function CatalogRow({genre_name, genre_id}) {
+export default function CatalogRow({genre_name, genre_id, discover_url}: any) {
   const [scrolX, setScrollX] = useState(-400);
 
-  const url = `${import.meta.env.VITE_APP_BASE_URL}/discover/movie?api_key=${import.meta.env.VITE_APP_API_KEY}&with_genres=${genre_id}`;
+  const url = `${import.meta.env.VITE_APP_BASE_URL}/${discover_url}?api_key=${import.meta.env.VITE_APP_API_KEY}&with_genres=${genre_id}`;
 
   const handleLeftArrow = () => {
     let x : any = scrolX + Math.round(Math.round(window.innerWidth / 2));
@@ -42,10 +42,10 @@ export default function CatalogRow({genre_name, genre_id}) {
   if(error) return <h1>ERRO</h1>
   if (data)
     return (
-      <div className="movie-row">
+      <div className="catalog-row">
           <h1 className="category">{genre_name}</h1>
           <div
-            className="movie-row-list-area"
+            className="catalog-row-list-area"
             style={{
               marginLeft: `${scrolX}px`,
               width: `${data.results.length * 207}px`,
@@ -60,7 +60,7 @@ export default function CatalogRow({genre_name, genre_id}) {
               <NavigateNextIcon style={{ color: "white", fontSize: "50px" }} />
             </div>
             {data.results.map((data: any, key: any) => (
-              <div className="movie-card" key={key} style={{}}>
+              <div className="catalog-card" key={key} style={{}}>
                 <Link to="#" >
                   <img src={`${import.meta.env.VITE_APP_IMAGE_URL}/w200${data.poster_path}`} />
                 </Link> 

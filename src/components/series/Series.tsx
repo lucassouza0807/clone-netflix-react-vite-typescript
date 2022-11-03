@@ -1,30 +1,32 @@
 import Loading from "@layouts/loading/Loading";
 import useFetch from "@hooks/useFetch/useFetch";
 import ErrorPage from "@layouts/error_page/ErrorPage";
+import CatalogRow from "@components/catalog_row/CatalogRow";
+import Featured from "@components/featured/Featured";
 
-export default function Series(props: any) {  
-  const url = `${import.meta.env.VITE_APP_BASE_URL}/discover/tv?api_key=${import.meta.env.VITE_APP_API_KEY}`;
+export default function Series(props: any) {
+  const url = `${import.meta.env.VITE_APP_BASE_URL}/genre/tv/list?api_key=${
+    import.meta.env.VITE_APP_API_KEY
+  }&language=pt-BR`;
 
   const { data, error } = useFetch(url);
-  
-  if (error) return <ErrorPage /> ;
 
-  if (data) 
+  if (error) return <ErrorPage />;
+
+  if (data) {
+    console.log(data);
     return (
       <div>
-        
-        <h1 className="category">Séries</h1>
-        <div className="serie-div">
-          {data.results.map((data: any, key: any) => (
-            <div className="movie-card" key={key}>
-              <a href="">
-                <img
-                  src={"https://image.tmdb.org/t/p/w300/" + data.poster_path}
-                />
-              </a>
-            </div>
-          ))}
-        </div>
+        <Featured />
+        {data.genres.map((genre: any, key: number) => (
+          <CatalogRow
+            discover_url="discover/tv"
+            key={key}
+            genre_name={genre.name}
+            genre_id={genre.id}
+          />
+        ))}
       </div>
     );
+  }
 }

@@ -7,21 +7,20 @@ import ErrorPage from "@layouts/error_page/ErrorPage";
 import useFetch from "@hooks/useFetch/useFetch.js";
 
 export default function Browser() {
-
   const url = `${import.meta.env.VITE_APP_BASE_URL}/genre/movie/list?api_key=${import.meta.env.VITE_APP_API_KEY}&language=pt-BR`;
 
-  const {data, error } =  useFetch(url);
+  const { data, error } = useFetch(url);
 
-  if (error) return <ErrorPage />
-  
+  if (error) return <ErrorPage />;
+
   if (data) {
     return (
       <div>
         <Featured />
         <Trending />
         {data.genres.map((genre: any, key: number) => (
-          <Catalog key={key} genre_name={genre.name} genre_id={genre.id} />
-        ))} 
+          <Catalog discover_url="discover/movie" key={key} genre_name={genre.name} genre_id={genre.id} />
+        ))}
       </div>
     );
   }

@@ -1,6 +1,6 @@
 # clone-netflix-react-vite-typescript
 Clone netflix feito em react e usando vite
-<h3>OBS: pra ter acesso a API você precisa de uma api key do movie database você pode conseguir facilmente no site deles https://www.themoviedb.org/</h3>
+<h3>OBS: pra ter acesso aos recursos da api você precisa de uma api key do movie database você pode conseguir facilmente no site deles https://www.themoviedb.org/</h3>
 <h4>Importante ler a documentação da api https://developers.themoviedb.org/3/getting-started/introduction </h4>
 <p>
 Para aplicação funcionar corretamente você precisa criar um arquivo .env na raiz do projeto:

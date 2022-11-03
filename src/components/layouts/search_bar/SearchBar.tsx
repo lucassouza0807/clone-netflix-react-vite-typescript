@@ -32,7 +32,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="header-secondary-nav-menu">
+    <div className="search-bar-area" style={{ marginRight: "30px"}}>
       <div onClick={() => showSearchBar()}>
         <FontAwesomeIcon
           icon={faSearch}

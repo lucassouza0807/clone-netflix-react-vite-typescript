@@ -59,16 +59,16 @@ body {
   margin-right: 10px;
 }
 
-.header-secondary-nav-menu {
+.search-bar-area {
   position: absolute;
-  right: 120px;
+  right: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   
 }
 
-.header-secondary-nav-menu input {
+.search-bar-area input {
   background-color: #111;
   border: 1px solid #FFFFFF;
   outline: none;
@@ -86,6 +86,13 @@ body {
   transition: 1s;
 }
 
+.secondary-nav-menu {
+  position: absolute;
+  right: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .movie-row {
   width: 98vw;
   position: relative;

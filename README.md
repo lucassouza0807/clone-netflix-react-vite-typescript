@@ -1,5 +1,16 @@
 # clone-netflix-react-vite-typescript
-Clone netflix feito em react e usando vite 
-![Captura de tela 2022-10-30 - 03 41 43](https://user-images.githubusercontent.com/66807618/198866036-74a5bc64-55e6-4179-9655-9da8533f95db.png)
-![Captura de tela 2022-10-30 - 03 41 55](https://user-images.githubusercontent.com/66807618/198866044-4b188b76-e80e-454a-a939-918b02a7ba03.png)
-![Captura de tela 2022-10-30 - 03 42 01](https://user-images.githubusercontent.com/66807618/198866045-963f2e67-16eb-4ed1-8d77-3da7b1ed45d5.png)
+Clone netflix feito em react e usando vite
+<h3>OBS: pra ter acesso a API você precisa de uma api key do movie database você pode conseguir facilmente no site deles https://www.themoviedb.org/</h3>
+<h4>Importante ler a documentação da api https://developers.themoviedb.org/3/getting-started/introduction </h4>
+<p>
+Para aplicação funcionar corretamente você precisa criar um arquivo .env na raiz do projeto:
+<li>VITE_APP_API_KEY=API_KEY_EXAMPLE</li>
+<li>VITE_APP_API_BASE_URL=https://api.themoviedb.org/3</li>
+<li>VITE_APP_IMAGE_URL=https://image.tmdb.org/t/p</li>
+
+</p>
+<h2>IMAGENS</h2>
+
+![Captura de tela 2022-11-03 - 01 00 24](https://user-images.githubusercontent.com/66807618/199645351-b13054d6-c213-42e0-8dc2-fc1932fcdda3.png)
+![Captura de tela 2022-10-30 - 03 41 43](https://user-images.githubusercontent.com/66807618/199645418-43165f2c-5cf9-455e-a005-43d9d94207e9.png)
+![Captura de tela 2022-11-03 - 01 00 24](https://user-images.githubusercontent.com/66807618/199645436-240c866a-7e9f-4dae-964c-d7bf66aed148.png)

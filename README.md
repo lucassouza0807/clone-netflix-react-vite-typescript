@@ -11,6 +11,8 @@ Para aplicação funcionar corretamente você precisa criar um arquivo .env na r
 </p>
 <h2>IMAGENS</h2>
 
-![Captura de tela 2022-11-03 - 01 00 24](https://user-images.githubusercontent.com/66807618/199645351-b13054d6-c213-42e0-8dc2-fc1932fcdda3.png)
-![Captura de tela 2022-10-30 - 03 41 43](https://user-images.githubusercontent.com/66807618/199645418-43165f2c-5cf9-455e-a005-43d9d94207e9.png)
-![Captura de tela 2022-11-03 - 01 00 24](https://user-images.githubusercontent.com/66807618/199645436-240c866a-7e9f-4dae-964c-d7bf66aed148.png)
+![Captura de tela 2022-11-03 - 01 39 27](https://user-images.githubusercontent.com/66807618/199648772-9f7bff00-6d26-49fc-b674-1523a2aa4fc6.png)
+
+![Captura de tela 2022-11-03 - 01 41 38](https://user-images.githubusercontent.com/66807618/199648961-651204db-cc6f-48a3-aae7-a019e9cafc04.png)
+
+![Captura de tela 2022-11-03 - 01 40 58](https://user-images.githubusercontent.com/66807618/199648897-e7915eb9-7bf2-4f36-86a7-3255f34c1c52.png)

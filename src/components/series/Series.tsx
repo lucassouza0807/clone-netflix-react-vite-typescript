@@ -4,10 +4,8 @@ import ErrorPage from "@layouts/error_page/ErrorPage";
 import CatalogRow from "@components/catalog_row/CatalogRow";
 import Featured from "@components/featured/Featured";
 
-export default function Series(props: any) {
-  const url = `${import.meta.env.VITE_APP_BASE_URL}/genre/tv/list?api_key=${
-    import.meta.env.VITE_APP_API_KEY
-  }&language=pt-BR`;
+export default function Series() {
+  const url = `${import.meta.env.VITE_APP_BASE_URL}/genre/tv/list?api_key=${import.meta.env.VITE_APP_API_KEY}&language=pt-BR`;
 
   const { data, error } = useFetch(url);
 

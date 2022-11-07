@@ -59,6 +59,9 @@ export default function Header() {
               icon={faUser}
             />
           </Link>
+          <dialog>
+            
+          </dialog>
         </div>
         
       </div>

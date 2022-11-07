@@ -11,6 +11,10 @@ body {
   color: white;
 }
 
+.not-found {
+  font-family: 'Roboto', sans-serif;
+  border-radius: 3px;
+}
 .full-size-logo {
   width: 150px;
 }

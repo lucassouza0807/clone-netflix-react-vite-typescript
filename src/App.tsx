@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Series from "@components/series/Series";
 import NotFound from "@layouts/not_found/NotFound";
 
+
 function App() {
   return (
     <BrowserRouter>
